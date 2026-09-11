@@ -1,7 +1,7 @@
 const inputForm = document.getElementById("formInput");
 const inputNama = document.getElementById("namaExpense");
-const inputJumlah = document.getElementById("jumlahExpense");
-const table = document.getElementById("tabelExpense");
+const inputNominal = document.getElementById("nominalExpense");
+const tabel = document.getElementById("tabelExpense");
 
 let daftarPengeluaran = [];
 let id_awal = 1;
@@ -9,31 +9,53 @@ let id_awal = 1;
 inputForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const newExpense = {
+    const pengeluaran = {
         id: id_awal++,
         nama: inputNama.value,
-        jumlah: inputJumlah.value
+        nominal: Number(inputNominal.value)
     };
     
-    daftarPengeluaran.push(newExpense);
+    daftarPengeluaran.push(pengeluaran);
 
     inputNama.value = "";
-    inputJumlah.value = "";
+    inputNominal.value = "";
+
+    updateTabel();
 });
 
-document.getElementById("themeToggle").addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-});
+function updateTotal() {
+    const totalData = document.getElementById("jumlahDataPengeluaran");
+    const totalHarga = document.getElementById("totalNominalPengeluaran");
 
-function addMessage(user, text, isRandom=false) {
-    let msgDiv = document.createElement("div");
+    const jumlahData = daftarPengeluaran.length;
+    const jumlahHarga = daftarPengeluaran.reduce((total, curr) => total + curr.nominal, 0)
 
-    msgDiv.className = "message";
-    msgDiv.innerHTML = `<strong>${user}:</strong> ${text}`;
+    totalData.textContent = jumlahData;
+    totalHarga.textContent = jumlahHarga.toLocaleString("id-ID");
+}
 
-    if (isRandom) msgDiv.style.color = "gray";
+function hapusData(id) {
+    daftarPengeluaran = daftarPengeluaran.filter(data => data.id != id);
+    updateTabel();
+}
 
-    expenseTable.appendChild(msgDiv);
+function updateTabel() {
+    tabel.innerHTML = "";
 
-    expenseTable.scrollTop = expenseTable.scrollHeight;
+    daftarPengeluaran.forEach((data, index) => {
+        const baris = document.createElement("tr");
+
+        baris.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${data.nama}</td>
+            <td>Rp. ${data.nominal.toLocaleString("id-ID")}</td>
+            <td>
+                <button onclick="hapusData(${data.id})">Hapus</button>
+            </td>
+        `;
+
+        tabel.appendChild(baris);
+    });
+
+    updateTotal();
 }
