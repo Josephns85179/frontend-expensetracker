@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.expense-table {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chat-form button {
+  padding: 8px 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background: #0056b3;
+}
+
+.errors {
+  color: red;
+  margin-top: 8px;
+}
+
+.controls {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button#themeToggle {
+  padding: 6px 12px;
+  border: none;
+  background: #444;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button#themeToggle:hover {
+  background: #222;
+}
+
+/* Dark mode */
+body.dark {
+  background: #222;
+  color: white;
+}
+
+body.dark .container {
+  background: #333;
+  color: white;
+}
+
+body.dark .chat-box {
+  background: #444;
+  color: white;
+}
+
+body.dark .chat-form input {
+  background: #555;
+  color: white;
+  border: 1px solid #777;
+}
