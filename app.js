@@ -46,10 +46,10 @@ function updateTabel() {
         const baris = document.createElement("tr");
 
         baris.innerHTML = `
-            <td>${index + 1}</td>
+            <td style="text-align: center;">${index + 1}</td>
             <td>${data.nama}</td>
             <td>Rp. ${data.nominal.toLocaleString("id-ID")}</td>
-            <td>
+            <td style="text-align: center;">
                 <button onclick="hapusData(${data.id})">Hapus</button>
             </td>
         `;

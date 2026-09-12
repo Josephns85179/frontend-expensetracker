@@ -1,18 +1,23 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  background: rgb(230, 255, 230);
   color: #333;
   margin: 0;
   padding: 20px;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
-  background: white;
+  background: whitesmoke;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -20,84 +25,107 @@ h2 {
   margin-bottom: 15px;
 }
 
-.expense-table {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
-  height: 300px;
-  overflow-y: auto;
-  margin-bottom: 15px;
-  background: #fafafa;
-}
-
-.chat-form {
+.input-form {
   display: flex;
   gap: 10px;
+  height: 30px;
 }
 
-.chat-form input {
+.input-form input {
   flex: 1;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.chat-form button {
+.input-form button {
   padding: 8px 16px;
   border: none;
-  background: #007bff;
+  background: rgb(84, 194, 84);
   color: white;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.chat-form button:hover {
-  background: #0056b3;
+.input-form button:hover {
+  background: #3b9647;
 }
 
-.errors {
-  color: red;
-  margin-top: 8px;
-}
 
-.controls {
-  margin-top: 15px;
+.summary-container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  gap: 16;
+  margin-bottom: 20px;
 }
 
-button#themeToggle {
-  padding: 6px 12px;
+.summary-card {
+  flex: 1;
+  height: 150px;
+  margin: 25px;
+  padding: 50px;
+  background: rgb(216, 252, 216);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+.summary-card h3 {
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.summary-card h4 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.table-container {
+    background-color: rgb(216, 252, 216);
+    border-radius: 24px; 
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    overflow-x: auto; 
+}
+
+.expense-table {
+    width: 100%;
+    text-align: left;
+}
+
+.expense-table th {
+    padding: 18px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.expense-table td {
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.expense-table tr:last-child td {
+    border-bottom: none; 
+}
+
+.expense-table tbody tr {
+    transition: background-color 0.2s ease;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.expense-table button {
+  padding: 8px 16px;
   border: none;
-  background: #444;
+  background: rgb(240, 120, 120);
   color: white;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button#themeToggle:hover {
-  background: #222;
-}
-
-/* Dark mode */
-body.dark {
-  background: #222;
-  color: white;
-}
-
-body.dark .container {
-  background: #333;
-  color: white;
-}
-
-body.dark .chat-box {
-  background: #444;
-  color: white;
-}
-
-body.dark .chat-form input {
-  background: #555;
-  color: white;
-  border: 1px solid #777;
+.expense-table button:hover {
+  background: rgb(204, 63, 63);
 }

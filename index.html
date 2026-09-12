@@ -7,33 +7,38 @@
     </head>
     <body>
         <div class="container">
-            <h2>Expense Tracker by 535250135</h2>
+            <h1>Expense Tracker by 535250135</h1>
 
-            <div id="expenseTable" class="expenseTable"></div>
-
-            <form id="formInput" class="chat-form">
+            <form id="formInput" class="input-form">
                 <input type="text" id="namaExpense" placeholder="Keterangan pengeluaran" required>
                 <input type="number" id="nominalExpense" placeholder="Nominal pengeluaran (Rp.)" min="1" required>
                 <button type="submit">Tambahkan</button>
             </form>
-
-            <h4>Total data pengeluaran:</h4>
-            <p id="jumlahDataPengeluaran">0</p>
-            <h4>Total nominal semua pengeluaran (Rp):</h4>
-            <p id="totalNominalPengeluaran">0</p>
+            <div class="summary-container">
+                <div class="summary-card">
+                    <h3>Jumlah data pengeluaran:</h3>
+                    <h4 id="jumlahDataPengeluaran">0</h4>
+                </div>
+                <div class="summary-card">
+                    <h3>Total nominal semua pengeluaran:</h3>
+                    <h4>Rp. <span id="totalNominalPengeluaran">0</span></h4>
+                </div>
+            </div>
 
             <h2>Tabel Pengeluaran</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nomor</th>
-                        <th>Keterangan</th>
-                        <th>Nominal</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody id="tabelExpense"></tbody>
-            </table>
+            <div class="table-container">
+                <table class="expense-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px; text-align: center;">No.</th>
+                            <th style="width: 350px;">Keterangan</th>
+                            <th style="width: 350px;">Nominal</th>
+                            <th style="width: 30px; text-align: center;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelExpense"></tbody>
+                </table>
+            </div>
         </div>
         <script src="app.js"></script>
     </body>
