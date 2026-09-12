@@ -81,40 +81,40 @@ h2 {
 }
 
 .table-container {
-    background-color: rgb(216, 252, 216);
-    border-radius: 24px; 
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    overflow-x: auto; 
+  background-color: rgb(216, 252, 216);
+  border-radius: 24px; 
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  overflow-x: auto; 
 }
 
 .expense-table {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
 
 .expense-table th {
-    padding: 18px 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
+  padding: 18px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
 }
 
 .expense-table td {
-    padding: 20px;
-    font-size: 18px;
-    color: #333;
-    vertical-align: middle;
+  padding: 20px;
+  font-size: 18px;
+  color: #333;
+  vertical-align: middle;
 }
 
 .expense-table tr:last-child td {
-    border-bottom: none; 
+  border-bottom: none; 
 }
 
 .expense-table tbody tr {
-    transition: background-color 0.2s ease;
-    background-color: white;
-    border-radius: 8px;
+  transition: background-color 0.2s ease;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .expense-table button {

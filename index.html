@@ -12,6 +12,7 @@
             <form id="formInput" class="input-form">
                 <input type="text" id="namaExpense" placeholder="Keterangan pengeluaran" required>
                 <input type="number" id="nominalExpense" placeholder="Nominal pengeluaran (Rp.)" min="1" required>
+                <input type="date" id="tanggalExpense" required>
                 <button type="submit">Tambahkan</button>
             </form>
             <div class="summary-container">
@@ -31,8 +32,9 @@
                     <thead>
                         <tr>
                             <th style="width: 40px; text-align: center;">No.</th>
-                            <th style="width: 350px;">Keterangan</th>
-                            <th style="width: 350px;">Nominal</th>
+                            <th style="width: 300px;">Keterangan</th>
+                            <th style="width: 300px;">Nominal</th>
+                            <th style="width: 300px;">Tanggal</th>
                             <th style="width: 30px; text-align: center;">Aksi</th>
                         </tr>
                     </thead>

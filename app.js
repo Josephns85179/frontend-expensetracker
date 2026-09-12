@@ -1,6 +1,7 @@
 const inputForm = document.getElementById("formInput");
 const inputNama = document.getElementById("namaExpense");
 const inputNominal = document.getElementById("nominalExpense");
+const inputTanggal = document.getElementById("tanggalExpense");
 const tabel = document.getElementById("tabelExpense");
 
 let daftarPengeluaran = [];
@@ -12,13 +13,15 @@ inputForm.addEventListener("submit", function (e) {
     const pengeluaran = {
         id: id_awal++,
         nama: inputNama.value,
-        nominal: Number(inputNominal.value)
+        nominal: Number(inputNominal.value),
+        tanggal: inputTanggal.value
     };
     
     daftarPengeluaran.push(pengeluaran);
 
     inputNama.value = "";
     inputNominal.value = "";
+    inputTanggal.value = "";
 
     updateTabel();
 });
@@ -49,6 +52,7 @@ function updateTabel() {
             <td style="text-align: center;">${index + 1}</td>
             <td>${data.nama}</td>
             <td>Rp. ${data.nominal.toLocaleString("id-ID")}</td>
+            <td>${data.tanggal}</td>
             <td style="text-align: center;">
                 <button onclick="hapusData(${data.id})">Hapus</button>
             </td>
