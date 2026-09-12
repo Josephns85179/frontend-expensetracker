@@ -29,6 +29,7 @@ h2 {
   display: flex;
   gap: 10px;
   height: 30px;
+  margin-bottom: 10px;
 }
 
 .input-form input {
@@ -41,32 +42,31 @@ h2 {
 .input-form button {
   padding: 8px 16px;
   border: none;
-  background: rgb(84, 194, 84);
+  background: rgb(71, 190, 71);
   color: white;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .input-form button:hover {
-  background: #3b9647;
+  background: rgb(41, 153, 41);
 }
 
 
 .summary-container {
   display: flex;
   gap: 16;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .summary-card {
   flex: 1;
-  height: 150px;
+  height: 150px;  
   margin: 25px;
-  padding: 50px;
   background: rgb(216, 252, 216);
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
+  border-radius: 24px;
 }
 
 .summary-card h3 {
