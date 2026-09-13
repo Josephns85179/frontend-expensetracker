@@ -1,12 +1,12 @@
 # Expense Tracker by Joseph/535250135
+Menggunakan HTML, CSS, dan JavaScript
+
 Halaman website expense tracker memiliki fungsi sebagai berikut:
-1. Input data pengeluaran (nama, nominal, dan tanggal)
-2. Menampilkan semua data pengeluaran yang sudah dimasukkan
-3. Menampilkan total nominal seluruh data pengeluaran
+1. Input data pengeluaran (nama, nominal, dan tanggal) melalui form yang tersedia
+2. Menampilkan semua data pengeluaran yang sudah dimasukkan pada tabel
+3. Menampilkan total nominal seluruh data pengeluaran (dengan format otomatis ke Rupiah)
 4. Menghapus data pengeluaran
 5. Menampilkan total jumlah data pengeluaran
-
-Menggunakan HTML, CSS, dan JavaScript
 
 Penjelasan singkat kode:
 1. Setiap object pengeluaran memiliki id, keterangan, dan nominal. Id digunakan untuk memudahkan proses penghapusan data pengeluaran.
